@@ -1,0 +1,29 @@
+<%- include('partials/header'); -%>
+
+<h1>Compose</h1>
+
+<form class="" action="/compose" method="post"> <!-- Action, what file do you want the post to be enacted in? -->
+  <div class="form-group"> <!-- boostrap method to group everything tightly together -->
+    <label for="usr">Title</label>
+    <input type="text" class="form-control" name="titleOfPostHTML" id="usr" value="">
+    <!-- text  to place texts in  -->
+      <!-- text, is p much a textbox as well,  Name is the req.body.variable <-- and the variable in our case is after name="anythingInHere" -->
+    <label for="comment">Post</label>
+    <textarea class="form-control" rows="5"  name="bodyOfPostHTML" id="comment"></textarea>
+  </div>  <!-- form control is a bootstrap class to align divs , check its properties in stylesheet -->
+
+<button class="btn btn-primary" type="submit" name="">publish</button> <!-- making a button with publish titled on button. -->
+</form>
+
+
+
+
+  <%- include('partials/footer'); -%>
+
+
+
+
+
+
+
+<!-- CopyPaste comments -->

@@ -1,0 +1,21 @@
+
+  <%- include('partials/header'); -%> <!-- add the header.ejs file from partials directory inside views folder. -->
+
+<h1>Home</h1>
+
+<p>
+<%= startingContent %> <!-- startingContent is the key: in JS for res.render, the value is in the app.js -->
+  </p>
+
+
+<%  postArrayinsideEJS.forEach((singularPost, i) => { %> <!--go through each value inside postArray (it is called postArrayinsideEJS because it has to be called something else in EJS, i mean if you want to , you can all it postArray : postArray) -->
+   <h1><%= singularPost.title %> </h1> <!-- send singularPost .title object key from postArray IN js and display as header -->
+  <p><%=  singularPost.body.substring(0 , 100) %>...<a href="/post/<%= singularPost.title%>" >Read More</a></p>
+<!-- A way to truncate words in paragraph -->
+<%  }); %>
+
+
+
+
+
+  <%- include('partials/footer'); -%> <!-- add the footer.ejs file from partials directory inside views folder. -->
